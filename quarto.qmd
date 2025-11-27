@@ -1,0 +1,22 @@
+---
+format: live-html
+engine: knitr
+---
+
+{{< include ./_extensions/r-wasm/live/_knitr.qmd >}}
+---
+
+## Quarto-live
+
+Embed WebAssembly powered code blocks and exercises for both the R and Python languages into [Quarto](https://quarto.org/) documents with HTML-based output formats. To learn more about Quarto see <https://r-wasm.github.io/quarto-live/>.
+
+```{webr}
+for (x in 1:5) {
+  print(x ** 2)
+}
+```
+
+```{pyodide}
+for x in range(1, 6):
+  print(10 + x)
+```
