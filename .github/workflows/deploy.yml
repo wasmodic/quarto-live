@@ -30,7 +30,7 @@ jobs:
         env:
           QUARTO_PRINT_STACK: true
         run: |
-          quarto render docs
+          quarto render --output-dir build --output index.html --
           echo "QUARTO_OUTPUT=_site" >> $GITHUB_ENV
       - name: Upload Artifact
         uses: actions/upload-pages-artifact@v3
